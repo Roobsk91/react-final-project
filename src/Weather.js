@@ -14,7 +14,7 @@ function handleResponse(response) {
         city: response.data.city,
         description: response.data.condition.description,
         humidity: response.data.temperature.humidity,
-        iconUrl: `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`,
+        iconUrl: response.data.condition.icon,
         date: new Date(response.data.time * 1000),
     });
 }
