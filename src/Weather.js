@@ -49,11 +49,11 @@ if (weatherData.ready) {
                         autoFocus="on"
                         onChange={handleCityChange} />
                     </div>
-                    <div className="col-3">
+                    <div className="col-3 clicker">
                         <input 
                         type="submit" 
                         value="Search" 
-                        className="btn btn-primary w-100"/>
+                        className="btn w-100"/>
                     </div>
                 </div>
             </form>

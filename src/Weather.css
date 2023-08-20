@@ -1,7 +1,7 @@
 .Weather {
-    border: 1px solid #dadde1;
+    border: 1px solid #B3723C;
     font-family: arial, sans-serif;
-    color: #878787;
+    color: #02385A;
     padding: 16px;
     border-radius: 4px;
 }
@@ -35,7 +35,6 @@
 
 .Weather .temperature {
     font-weight: bold;
-    color: rgb(33, 33, 33);
     font-size: 64px;
     line-height: 64px;
     margin-left: 5px;
@@ -50,4 +49,10 @@
     position: relative;
     top: -32px;
     margin-left: 5px;
+}
+
+.Weather .clicker {
+    background-color: #B3723C;
+    color: #3F2E24;
+    border-radius: 3px;
 }
