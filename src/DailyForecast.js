@@ -13,7 +13,19 @@ setLoaded(true);
 }   
     if (loaded) {
         return (
-        <WeatherForecastDay data={forecast[0]} />
+        <div className="DailyForecast">
+            <div className="row">
+                {forecast.map(function (weekForecast, index) {
+                    if (index < 5) {
+                    return (
+                        <div className="col" key={index}>
+                <WeatherForecastDay data={weekForecast} />
+                </div>
+                    );
+                    }
+                })}
+            </div>
+        </div>
     );
     } else {
     let apiKey = "343956b42t678f23abfoa30906bf4370";
