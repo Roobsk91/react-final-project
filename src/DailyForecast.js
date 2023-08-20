@@ -26,6 +26,8 @@ setLoaded(true);
                 <WeatherForecastDay data={weekForecast} />
                 </div>
                     );
+                    } else {
+                    return null;
                     }
                 })}
             </div>
