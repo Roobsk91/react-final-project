@@ -9,7 +9,7 @@ export default function DailyForecast(props) {
 
     useEffect(() => {
     setLoaded(false);
-    }, [props.query]);
+    }, [props.coordinate]);
 
 function handleResponse(response) {
 setForecast(response.data.daily);
@@ -35,8 +35,9 @@ setLoaded(true);
     );
     } else {
     let apiKey = "343956b42t678f23abfoa30906bf4370";
-    let city = props.query;
-    let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+    let lat = props.coordinates.latitude;
+    let lon = props.coordinates.longitude;
+    let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lat=${lat}&lon=${lon}&key=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
     return null;
     }
